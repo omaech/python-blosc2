@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "scikit-build", "cython", "cmake", "ninja", "oldest-supported-numpy"]
+requires = ["setuptools", "scikit-build == 0.16.7", "cython", "cmake == 3.26.1", "ninja", "oldest-supported-numpy"]
 
 [tool.cibuildwheel]
 skip = "cp36-* cp37-* pp37-* *-manylinux_i686 *_ppc64le *_s390x *-musllinux*"
