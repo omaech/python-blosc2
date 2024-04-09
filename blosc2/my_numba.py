@@ -7,6 +7,7 @@ import blosc2
 # nopython=True and parallel=True specify that nopython mode will be used and
 # the loop will attempt to be parallelized with Numba
 
+@nb.jit(nopython=True, parallel=True)
 def mean_numba(a, b, c):
     out = np.empty(a.shape, a.dtype)  # Create an empty array to store the result
     for i in nb.prange(a.shape[0]):  # Iterate over the first dimension of array a in parallel
